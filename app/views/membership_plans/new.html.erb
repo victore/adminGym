@@ -1,0 +1,11 @@
+<% content_for :title, "New membership plan" %>
+
+<h1>New membership plan</h1>
+
+<%= render "form", membership_plan: @membership_plan %>
+
+<br>
+
+<div>
+  <%= link_to "Back to membership plans", membership_plans_path %>
+</div>

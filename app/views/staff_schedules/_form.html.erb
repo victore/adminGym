@@ -1,0 +1,42 @@
+<%= form_with(model: staff_schedule) do |form| %>
+  <% if staff_schedule.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(staff_schedule.errors.count, "error") %> prohibited this staff_schedule from being saved:</h2>
+
+      <ul>
+        <% staff_schedule.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :staff_id, style: "display: block" %>
+    <%= form.text_field :staff_id %>
+  </div>
+
+  <div>
+    <%= form.label :gym_id, style: "display: block" %>
+    <%= form.text_field :gym_id %>
+  </div>
+
+  <div>
+    <%= form.label :day_of_week, style: "display: block" %>
+    <%= form.number_field :day_of_week %>
+  </div>
+
+  <div>
+    <%= form.label :start_time, style: "display: block" %>
+    <%= form.time_field :start_time %>
+  </div>
+
+  <div>
+    <%= form.label :end_time, style: "display: block" %>
+    <%= form.time_field :end_time %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

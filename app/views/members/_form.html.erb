@@ -1,0 +1,62 @@
+<%= form_with(model: member) do |form| %>
+  <% if member.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(member.errors.count, "error") %> prohibited this member from being saved:</h2>
+
+      <ul>
+        <% member.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :membership_plan_id, style: "display: block" %>
+    <%= form.text_field :membership_plan_id %>
+  </div>
+
+  <div>
+    <%= form.label :gym_id, style: "display: block" %>
+    <%= form.text_field :gym_id %>
+  </div>
+
+  <div>
+    <%= form.label :membership_number, style: "display: block" %>
+    <%= form.text_field :membership_number %>
+  </div>
+
+  <div>
+    <%= form.label :join_date, style: "display: block" %>
+    <%= form.date_field :join_date %>
+  </div>
+
+  <div>
+    <%= form.label :expiry_date, style: "display: block" %>
+    <%= form.date_field :expiry_date %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.number_field :status %>
+  </div>
+
+  <div>
+    <%= form.label :emergency_contact, style: "display: block" %>
+    <%= form.text_field :emergency_contact %>
+  </div>
+
+  <div>
+    <%= form.label :emergency_phone, style: "display: block" %>
+    <%= form.text_field :emergency_phone %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

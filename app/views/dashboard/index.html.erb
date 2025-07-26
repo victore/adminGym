@@ -1,0 +1,57 @@
+<div class="dashboard">
+  <h1>Gym Admin Dashboard</h1>
+  
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h3>Members</h3>
+      <p class="stat-number"><%= @total_members %></p>
+      <p class="stat-label">Total Members</p>
+      <p class="stat-number"><%= @active_members %></p>
+      <p class="stat-label">Active Members</p>
+    </div>
+    
+    <div class="stat-card">
+      <h3>Staff</h3>
+      <p class="stat-number"><%= @total_staff %></p>
+      <p class="stat-label">Total Staff</p>
+      <p class="stat-number"><%= @active_staff %></p>
+      <p class="stat-label">Active Staff</p>
+    </div>
+    
+    <div class="stat-card">
+      <h3>Gyms</h3>
+      <p class="stat-number"><%= @total_gyms %></p>
+      <p class="stat-label">Total Gyms</p>
+      <p class="stat-number"><%= @active_gyms %></p>
+      <p class="stat-label">Active Gyms</p>
+    </div>
+    
+    <div class="stat-card">
+      <h3>Today's Activity</h3>
+      <p class="stat-number"><%= @today_attendances %></p>
+      <p class="stat-label">Check-ins</p>
+      <p class="stat-number"><%= @today_bookings %></p>
+      <p class="stat-label">Bookings</p>
+    </div>
+    
+    <div class="stat-card">
+      <h3>Payments</h3>
+      <p class="stat-number"><%= @pending_payments %></p>
+      <p class="stat-label">Pending Payments</p>
+      <p class="stat-number"><%= @overdue_invoices %></p>
+      <p class="stat-label">Overdue Invoices</p>
+    </div>
+  </div>
+  
+  <div class="quick-actions">
+    <h2>Quick Actions</h2>
+    <div class="action-buttons">
+      <%= link_to "New Member", new_member_path, class: "btn btn-primary" %>
+      <%= link_to "New Staff", new_staff_path, class: "btn btn-primary" %>
+      <%= link_to "New Gym", new_gym_path, class: "btn btn-primary" %>
+      <%= link_to "View Members", members_path, class: "btn btn-secondary" %>
+      <%= link_to "View Staff", staffs_path, class: "btn btn-secondary" %>
+      <%= link_to "View Gyms", gyms_path, class: "btn btn-secondary" %>
+    </div>
+  </div>
+</div>

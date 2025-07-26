@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  member: one
+  gym: one
+  check_in: 2025-07-26 11:00:31
+  check_out: 2025-07-26 11:00:31
+
+two:
+  member: two
+  gym: two
+  check_in: 2025-07-26 11:00:31
+  check_out: 2025-07-26 11:00:31
