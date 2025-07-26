@@ -1,13 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
+A rails app to admin gyms (includes Users, Roles, Memberships)
 
 🔧 Gems Added:
-devise - User authentication
-cancancan - Authorization
-bcrypt - Password encryption
+1. devise - User authentication
+2. cancancan - Authorization
+3. bcrypt - Password encryption
 
 📊 Models Created with Full Associations:
 User (with Devise authentication)
